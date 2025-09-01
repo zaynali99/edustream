@@ -1,24 +1,35 @@
 "use client";
-import { useAuth } from "@/lib/auth";
-import { ApprovalsTable } from "@/components/AdminTable";
 
-export default function AdminPage() {
+import { useAuth } from "@/lib/auth";
+
+export default function DashboardPage() {
   const { user } = useAuth();
-  if (!user) return <div className="container py-10">Please login.</div>;
-  if (user.role !== "admin") return <div className="container py-10">Access denied.</div>;
+
+  // ✅ Fixed JSX syntax
+  if (!user) {
+    return (
+      <div className="container py-10">
+        Please <a className="underline" href="/login">login</a>.
+      </div>
+    );
+  }
 
   return (
     <div className="container py-10 space-y-6">
-      <h1 className="text-3xl font-semibold">Admin Dashboard</h1>
-      <ApprovalsTable />
-      <div className="card p-4">
-        <h3 className="font-semibold mb-2">Admin Tools</h3>
-        <ul className="list-disc pl-5 text-sm text-slate-600">
-          <li>Manage users & roles in Firestore users collection</li>
-          <li>Create batches/lectures in Firestore (UI CRUD can be added)</li>
-          <li>Verify payments and map paymentId to enrollments</li>
-        </ul>
-      </div>
+      <h1 className="text-3xl font-semibold">Student Dashboard</h1>
+
+      <section className="space-y-3">
+        {/* Example sections */}
+        <div className="p-4 border rounded-lg shadow-sm">
+          <h2 className="text-xl font-medium">Your Batches</h2>
+          <p className="text-gray-600">View and manage your enrolled batches here.</p>
+        </div>
+
+        <div className="p-4 border rounded-lg shadow-sm">
+          <h2 className="text-xl font-medium">Recent Lectures</h2>
+          <p className="text-gray-600">Catch up on your latest lecture videos.</p>
+        </div>
+      </section>
     </div>
   );
 }
