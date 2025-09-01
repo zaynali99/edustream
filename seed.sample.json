@@ -1,0 +1,12 @@
+{
+  "batches": {
+    "class11": { "name": "Class 11", "stream": "11", "price": 500, "syllabus": ["Kinematics","Atomic Structure","Trigonometry"], "visible": true, "createdAt": 1719870000000, "hours": 120 },
+    "class12": { "name": "Class 12", "stream": "12", "price": 500, "syllabus": ["Electrostatics","Aldehydes/Ketones","Calculus"], "visible": true, "createdAt": 1719870000001, "hours": 120 },
+    "neet":    { "name": "NEET Master", "stream": "NEET", "price": 500, "syllabus": ["Mechanics","Organic Basics","Human Physiology"], "visible": true, "createdAt": 1719870000002, "hours": 180 },
+    "jee":     { "name": "JEE Master", "stream": "JEE", "price": 500, "syllabus": ["Advanced Mechanics","Physical/Organic","Calculus"], "visible": true, "createdAt": 1719870000003, "hours": 180 }
+  },
+  "lectures": {
+    "lec1": { "batchId": "neet", "title": "NEET Physics: Kinematics 01", "youtubeId": "dQw4w9WgXcQ", "chapters": [{"t":0,"label":"Intro"},{"t":120,"label":"Equations"}], "duration": 42, "subject": "Physics", "published": true, "createdAt": 1719870001000 },
+    "lec2": { "batchId": "jee", "title": "JEE Math: Limits 01", "youtubeId": "dQw4w9WgXcQ", "chapters": [{"t":0,"label":"Basics"},{"t":300,"label":"Problems"}], "duration": 38, "subject": "Math", "published": true, "createdAt": 1719870002000 }
+  }
+}

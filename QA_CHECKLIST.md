@@ -1,0 +1,8 @@
+- All states (guest/paid/pending/approved) visible and tested
+- Price shows ₹500 everywhere
+- Lectures only for approved users
+- Responsive across devices
+- Fast LCP; no layout shifts
+- Clear help path if approval delayed
+- Focus states and keyboard nav OK
+- JSON-LD added on FAQ
